@@ -27,6 +27,15 @@ dependencies:
 ```
 This will create ```key-pip``` environment with all dependencies.
 In this case, the packages plotly, python.. will be installed.
+To activate this environment, use:
+```
+$ conda activate pip-env
+```
+To deactivate an active environment, use:
+```
+$ conda deactivate
+```
+
 ### 3 Usage
 Our tool provides a command line interface (CLI), it can be run by entering the arguments file (see below). By default, all the steps of the methods will be run, if you want to run just one or more steps, you can enter the number of steps you want by using ```--steps``` and the number of desired step separated by ”,”. The ```--help``` provides the help message describing required inputs and available options. It implements all the steps in the workflow described before. Each step will output one or more files. In general, the output of one step corresponds to the input of another one. This enables a straightforward application of the workflow for users without programming expertise. The typical usage is:
 From the main folder run:
