@@ -6,22 +6,27 @@ We introduce the ```key-pipeline```, a python package implementing a workflow fo
 couple of root nodes in a network using [pathrider](https://github.com/arnaudporet/pathrider) , a tool developed in our team
 to this purpose; (ii) then check the consistency of our data sets and provides explanations for inconsistencies using iggy tool; (iii) validate the predictions made by iggy by computing the number of predictions matching the related experimental fold-change from ICGC data; (iv) design a stability test by comparing prediction on subsets of observations with predictions using all observations; and finally (v) plot both precision scores for each sampling, and the evolution of the prediction compared to the entire set of observations.
 ### 2 Prerequisites
-key-pipeline is a python application that uses many libraries and tools. The easiest way to obtain all depencies packages is using Anaconda. First install either Anaconda or Miniconda, download requirements.txt file and then run:
+key-pipeline is a python application that uses many libraries and tools. The easiest way to obtain all depencies packages is using Anaconda. First install either Anaconda or Miniconda, then download environment.yml file to configure the environment and then run:
 
 ```
-$ conda install −−file requirements.txt
+$ conda env create -f environment.yml
 ```
-The ```requirements.txt``` file contain all depencies required for the successful execution of the program.
+The ```environment.yml``` file contain all depencies required for the successful execution of the program.
 ###### example of requirements file
 ```
-# This file may be used to create an environment using:
-# $ conda create −−name <env> −− file < this file >
-# platform: linux−64
-plotly=3.10.0=py_0
-python=3.7.3= h0371630_0
-r=3.5.1=r351_0
+name: pip-env
+channels:
+  - default
+dependencies:
+  - plotly==3.10.0
+  - python==3.7.3
+  - go
+  - pip
+  - pip:
+    - iggy==1.4.1
 ```
-In this case, the packages plotly, python and r will be installed.
+This will create ```key-pip``` environment with all dependencies.
+In this case, the packages plotly, python.. will be installed.
 ### 3 Usage
 Our tool provides a command line interface (CLI), it can be run by entering the arguments file (see below). By default, all the steps of the methods will be run, if you want to run just one or more steps, you can enter the number of steps you want by using ```--steps``` and the number of desired step separated by ”,”. The ```--help``` provides the help message describing required inputs and available options. It implements all the steps in the workflow described before. Each step will output one or more files. In general, the output of one step corresponds to the input of another one. This enables a straightforward application of the workflow for users without programming expertise. The typical usage is:
 ```
