@@ -12,6 +12,7 @@ key-pipeline is a python application that uses many libraries and tools. The eas
 $ conda env create -f environment.yml
 ```
 The ```environment.yml``` file contain all depencies required for the successful execution of the program.
+
 ###### example of requirements file
 ```
 name: pip-env
