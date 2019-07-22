@@ -13,7 +13,7 @@ $ conda env create -f environment.yml
 ```
 The ```environment.yml``` file contain all depencies required for the successful execution of the program.\
 
-###### example of requirements file
+###### Example of requirements file
 ```
 name: pip-env
 channels:
@@ -38,13 +38,15 @@ $ conda deactivate
 ```
 
 ### 3 Usage
-Our tool provides a command line interface (CLI), it can be run by entering the arguments file (see below). By default, all the steps of the methods will be run, if you want to run just one or more steps, you can enter the number of steps you want by using ```--steps``` and the number of desired step separated by ”,”. The ```--help``` provides the help message describing required inputs and available options. It implements all the steps in the workflow described before. Each step will output one or more files. In general, the output of one step corresponds to the input of another one. This enables a straightforward application of the workflow for users without programming expertise. 
+Our tool provides a command line interface (CLI), it can be run by entering the arguments file (see below). By default, all the steps of the methods will be run, if you want to run just one or more steps, you can enter the number of steps you want by using ```--steps``` and the number of desired step separated by ”,”. The ```--help``` provides the help message describing required inputs and available options. It implements all the steps in the workflow described before. Each step will output one or more files. In general, the output of one step corresponds to the input of another one. This enables a straightforward application of the workflow for users without programming expertise. \
 After the activataion of the environment, from the main folder run:
 ```
 $ python pipe.py @arguments.txt
 ```
 Where ```arguments.txt``` contains all the arguments needed for the execution of the pipeline.\
-####### Example of arguments file
+
+###### Example of arguments file
+
 Here is an example of an arguments file:
 ```
 --sif=/home/graph.sif
