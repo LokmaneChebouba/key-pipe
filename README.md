@@ -37,9 +37,7 @@ Where ```arguments.txt``` contains all the arguments needed for the execution of
 Here is an example of an arguments file:
 ```
 --sif=/home/graph.sif
---dir=up
 --icgc=/home/ICGC_data.csv
---steps=1,2,3,4,5
 --start_sampling=10
 --stop_sampling=15
 --step_sampling=5
