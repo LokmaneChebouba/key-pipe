@@ -11,7 +11,7 @@ key-pipeline is a python application that uses many libraries and tools. The eas
 ```
 $ conda env create -f environment.yml
 ```
-The ```environment.yml``` file contain all depencies required for the successful execution of the program.
+The ```environment.yml``` file contain all depencies required for the successful execution of the program.\
 
 ###### example of requirements file
 ```
@@ -43,7 +43,7 @@ After the activataion of the environment, from the main folder run:
 ```
 $ python pipe.py @arguments.txt
 ```
-Where ```arguments.txt``` contains all the arguments needed for the execution of the pipeline.
+Where ```arguments.txt``` contains all the arguments needed for the execution of the pipeline.\
 ####### Example of arguments file
 Here is an example of an arguments file:
 ```
