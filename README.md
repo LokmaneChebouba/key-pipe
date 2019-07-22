@@ -84,6 +84,8 @@ requiredarguments:
 ```
 ###### Assumptions 
 We assume that the network provided in the arguments file must be in the SIF file format
-###### Case studie ...
+###### Case studie
+An example for hepatocellular carcinoma (hcc) is provided under the folder ```example```, the KEGG graph extraction (in SIF format), the differential expression data obtained from ICGC data (in CSV format), the blacklisted species, and the validation parameters start sampling, stopsampling, step sampling, numbers run).
+
 ### 4 Steps
 Each step of the tool need some inputs, and produce outputs:
