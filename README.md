@@ -1,4 +1,3 @@
-### Readme to be completed..
 # key-pipeline
 A computational model to identify key protein-complexes associated to tumor progression
 ### 1 Introduction
@@ -120,8 +119,8 @@ Each step of the tool need some inputs and produce outputs, We found on each ste
 * Set of predictions
 #### 4.5. Plot
 ##### input
-* Prediction from ####### step 3
-* Set of predictions from ####### step 4
+* Prediction from step 3
+* Set of predictions from step 4
 ##### output
 * Prediction stability plot
 * Robusteness plot
