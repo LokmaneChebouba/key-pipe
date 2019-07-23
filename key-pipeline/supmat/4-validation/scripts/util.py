@@ -1,7 +1,7 @@
 # General-purpose library for statistical validation
 # --------------------------------------------------
 # This file is part of the Supplementary Material of the submission entitled:
-# Hepatocellular carcinoma computational models identify key protein-complexes associated to tumor progression
+# A pipeline to create predictive models: application to the tumor progression of hepatocellular carcinoma
 # Authors: Maxime Folschette, Vincent Legagneux, Arnaud Poret, Lokmane Chebouba, Carito Guziolowski and Nathalie Théret
 
 
