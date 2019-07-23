@@ -8,6 +8,12 @@ from argparse import ArgumentParser
 #from pyasp.asp import *
 #from __iggy__ import query, utils, parsers
 
+# -------------------------------------------------------------
+# This file is part of the Supplementary Material of the submission entitled:
+# A pipeline to create predictive models: application to the tumor progression of hepatocellular carcinoma
+# Authors: Maxime Folschette, Vincent Legagneux, Arnaud Poret, Lokmane Chebouba, Carito Guziolowski and Nathalie Théret
+
+
 def diffanalysis():
   print('----------- [1] Pre-treatment -----------')
   os.system('sh ./supmat/1-graph-extraction/scripts/run-extract.sh %s' % (ns.icgc))
