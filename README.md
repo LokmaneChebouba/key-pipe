@@ -88,30 +88,39 @@ We assume that the network provided in the arguments file must be in the SIF fil
 An example for hepatocellular carcinoma (hcc) is provided under the folder ```example```, the KEGG graph extraction (in SIF format), the differential expression data obtained from ICGC data (in CSV format), the blacklisted species, and the validation parameters start sampling, stopsampling, step sampling, numbers run).
 
 ### 4 Steps
-Each step of the tool need some inputs, and produce outputs:
-#### 4.1. Extracting regulatory signaling pathways
+Each step of the tool need some inputs and produce outputs, We found on each step the ```scripts``` folder that contain all scripts needed on each step and ```data``` folder which contain all the input/output data.
+#### 4.1. Threshold extraction
 ##### input
-   * The network file
-    * The root file
-    * Direction
+* The gross network file
+* ICGC data
 ##### output
-* Pruned graph with the observed nodes we have
-#### 4.2. Prediction
+* Species name
+* observations file
+#### 4.2. Extracting regulatory signaling pathways (Pathrider)
 ##### input
-* Pruned graph
-* Observation file
+* The gross network file
+* Species name
+* Blacklist
 ##### output
-* Prediction file
-#### 4.3. Validation, Robustness and precision
+* The filtered graph with the observed nodes we have
+#### 4.3. Prediction (Iggy)
 ##### input
-* Prediction file
+* The filtered graph
+* Observations file
 * ICGC file
 ##### output
-* CSV file (matching file)
-#### 4.4. Plot
+* Prediction
+#### 4.4. Validation, Robustness and precision
 ##### input
-* Matching file
+* The filtered graph
+* Observations file
+* ICGC file
 * Sampling parameters
 ##### output
-* Precision scores plot
+* Set of predictions
+#### 4.5. Plot
+##### input
+* Set of predictions
+##### output
 * Prediction stability plot
+* Robusteness plot
