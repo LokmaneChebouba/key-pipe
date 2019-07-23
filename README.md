@@ -120,7 +120,8 @@ Each step of the tool need some inputs and produce outputs, We found on each ste
 * Set of predictions
 #### 4.5. Plot
 ##### input
-* Set of predictions
+* Prediction from ####### step 3
+* Set of predictions from ####### step 4
 ##### output
 * Prediction stability plot
 * Robusteness plot
