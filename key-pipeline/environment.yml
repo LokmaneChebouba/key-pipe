@@ -1,0 +1,11 @@
+# run: conda env create -f environment.yml
+name: pip-env
+channels:
+  - default
+dependencies:
+  - plotly==3.10.0
+  - python==3.7.3
+  - go
+  - pip
+  - pip:
+    - iggy==1.4.1
