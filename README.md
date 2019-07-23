@@ -89,3 +89,29 @@ An example for hepatocellular carcinoma (hcc) is provided under the folder ```ex
 
 ### 4 Steps
 Each step of the tool need some inputs, and produce outputs:
+#### Extracting regulatory signaling pathways
+##### input
+   * The network file
+    * The root file
+    * Direction
+##### output
+* Pruned graph with the observed nodes we have
+#### Prediction
+##### input
+* Pruned graph
+* Observation file
+##### output
+* Prediction file
+#### Validation, Robustness and precision
+##### input
+* Prediction file
+* ICGC file
+##### output
+* CSV file (matching file)
+#### Plot
+##### input
+* Matching file
+* Sampling parameters
+##### output
+* Precision scores plot
+* Prediction stability plot
