@@ -1,0 +1,7 @@
+--sif=../example/hsa-2345-symb-nomulti-split-func-sign.sif
+--icgc=../example/GSEA_EMThigh_vs_EMTlow_diffexp.csv
+--b=../example/LIHC_primary_weakly_expressed_genes.txt
+--start_sampling=10
+--stop_sampling=15
+--step_sampling=5
+--numbers_run=2
