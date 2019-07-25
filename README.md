@@ -80,7 +80,7 @@ optional arguments :
 --stop_sampling STOP_SAMPLING     The stop sampling percentage. Default=100
 --step_sampling STEP_SAMPLING     The step of sampling. Default=5
 --numbers_run NUMBERS_RUN     The number of runs on each step. Default=100
-requiredarguments:
+required arguments:
 --sif SIF     influence graph in SIF format
 --icgc ICGC     ICGC file
 ```
