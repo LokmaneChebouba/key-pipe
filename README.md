@@ -6,7 +6,7 @@ couple of root nodes in a network using [pathrider](https://github.com/arnaudpor
 to this purpose; (ii) then check the consistency of our data sets and provides explanations for inconsistencies using iggy tool; (iii) validate the predictions made by iggy by computing the number of predictions matching the related experimental fold-change from ICGC data; (iv) design a stability test by comparing prediction on subsets of observations with predictions using all observations; and finally (v) plot both precision scores for each sampling, and the evolution of the prediction compared to the entire set of observations.
 ### 2 Prerequisites
 key-pipeline is a python application that uses many libraries and tools. The easiest way to obtain all depencies packages is using Anaconda.\
-You can install and configure automatically conda by running ```config.py``` file on the root folder using: ```python config.py```, this will install and configure ```pip-env``` environment. Or you choose to configure manually:\
+You can install and configure automatically conda by running ```config.py``` file on the ```key-pipeline``` folder using: ```python config.py```, this will install and configure ```pip-env``` environment. Or you choose to configure manually:\
 First install either Anaconda or Miniconda, then download environment.yml file to configure the environment and then run:
 
 ```
