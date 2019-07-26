@@ -27,7 +27,7 @@ dependencies:
   - pip:
     - iggy==1.4.1
 ```
-This will create ```key-pip``` environment with all dependencies.
+This will create ```pip-env``` environment with all dependencies.
 In this case, the packages plotly, python.. will be installed.
 ##### Activation/Deactivation of pip-env environment
 To activate this environment, use:
