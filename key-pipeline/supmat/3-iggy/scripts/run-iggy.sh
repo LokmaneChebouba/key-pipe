@@ -8,7 +8,7 @@
 # Install Iggy with:
 #   $ pip install --user iggy==1.4.1
 # Then specify the path to iggy.py in the following line:
-IGGY="${HOME}/miniconda3/envs/pip-env/bin/iggy.py"
+IGGY="$CONDA_PREFIX/bin/iggy.py"
 echo "Reading graph filtered.."
 echo "Reading observations.."
 echo "Reading ICGC file.."
