@@ -8,7 +8,7 @@
 # Authors: Maxime Folschette, Vincent Legagneux, Arnaud Poret, Lokmane Chebouba, Carito Guziolowski and Nathalie Théret
 
 OUTDIR="./supmat/4-validation/output"
-#mkdir "./supmat/5-plots/plots"
+rm -r ./supmat/5-plots/plots
 mkdir "./supmat/5-plots/plots"
 
 # Compute stability stats
