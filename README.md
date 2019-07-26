@@ -60,7 +60,7 @@ Here is an example of an arguments file:
 ```
 For more options you can ask for help:
 ```
-$ python pipe.py @arguments.txt --help
+$ python pipe.py --help
 ```
 ```
 usage: Usage : python pipe.py@arguments_file [--steps]
