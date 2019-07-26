@@ -31,9 +31,8 @@ then
   SUFFIX="--gen"
   shift
 fi
-$a=which iggy.py
-echo $a
-IGGY_COMMAND= /envs/pip-env/bin/iggy.py
+
+IGGY_COMMAND=  realpath iggy.py
 if [ "$1" = "--iggy-command" ]
 then
   IGGY_COMMAND="$2"
