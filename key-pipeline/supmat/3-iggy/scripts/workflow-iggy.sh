@@ -32,7 +32,7 @@ then
   shift
 fi
 
-IGGY_COMMAND="/.local/bin/iggy.py"
+IGGY_COMMAND="/anaconda3/envs/pip-env/bin/iggy.py"
 if [ "$1" = "--iggy-command" ]
 then
   IGGY_COMMAND="$2"
