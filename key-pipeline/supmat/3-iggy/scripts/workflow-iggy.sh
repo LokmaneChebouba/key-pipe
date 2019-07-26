@@ -32,7 +32,7 @@ then
   shift
 fi
 
-IGGY_COMMAND=  "miniconda3/envs/pip-env/bin/iggy.py"
+IGGY_COMMAND=  "$CONDA_PREFIX/bin/iggy.py"
 if [ "$1" = "--iggy-command" ]
 then
   IGGY_COMMAND="$2"
