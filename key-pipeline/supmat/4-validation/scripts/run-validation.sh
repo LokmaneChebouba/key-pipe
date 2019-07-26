@@ -19,7 +19,7 @@ STEP_SAMPLING=$5      # Sampling percentage step (f.i. 5)
 NUMBER_RUNS=$6      # Number of runs for each sampling (f.i. 100)
 
 # If needed, specify your Iggy command here:
-IGGY="${HOME}/anaconda3/envs/pip-env/bin/iggy.py"
+IGGY="${HOME}./envs/pip-env/bin/iggy.py"
 
 
 
