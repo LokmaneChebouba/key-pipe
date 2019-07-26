@@ -25,6 +25,7 @@ IGGY="${HOME}/anaconda3/envs/pip-env/bin/iggy.py"
 
 # Compute all runs for all samplings
 #OUTDIR="prp-${START_SAMPLING}-${STOP_SAMPLING}-${STEP_SAMPLING}-${NUMBER_RUNS}/"
+rm -r ./supmat/4-validation/output
 OUTDIR="./supmat/4-validation/output"
 
 #construct all the positive nodes on a file, and all negative nodes in another
