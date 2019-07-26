@@ -31,7 +31,7 @@ then
   SUFFIX="--gen"
   shift
 fi
-
+echo "hello"
 IGGY_COMMAND=  realpath iggy.py
 if [ "$1" = "--iggy-command" ]
 then
