@@ -77,7 +77,7 @@ optional arguments :
 [ 5 ] Plots
 ( I f many ,separate by ’,’). Default run all steps
 --start_sampling START_SAMPLING   The start sampling percentage. Default=10
---stop_sampling STOP_SAMPLING     The stop sampling percentage. Default=100
+--stop_sampling STOP_SAMPLING     The stop sampling percentage. Default=95
 --step_sampling STEP_SAMPLING     The step of sampling. Default=5
 --numbers_run NUMBERS_RUN         The number of runs on each step. Default=100
 required arguments:
