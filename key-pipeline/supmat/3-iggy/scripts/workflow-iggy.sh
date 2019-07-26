@@ -23,7 +23,7 @@
 # Example:
 #   sh workflow-iggy.sh updownreg.obs graph.sif icgc-v4.csv 0 0
 ###
-
+echo "hello"
 # Arguments
 SUFFIX=""
 if [ "$1" = "--gen" ]
@@ -31,7 +31,7 @@ then
   SUFFIX="--gen"
   shift
 fi
-echo "hello"
+
 IGGY_COMMAND=  realpath iggy.py
 if [ "$1" = "--iggy-command" ]
 then
