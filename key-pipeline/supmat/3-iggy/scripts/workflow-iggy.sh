@@ -32,7 +32,7 @@ then
   shift
 fi
 
-IGGY_COMMAND=  which iggy.py
+IGGY_COMMAND=  "/miniconda3/envs/bin/iggy.py"
 if [ "$1" = "--iggy-command" ]
 then
   IGGY_COMMAND="$2"
