@@ -23,7 +23,7 @@
 # Example:
 #   sh workflow-iggy.sh updownreg.obs graph.sif icgc-v4.csv 0 0
 ###
-echo "hello"
+
 # Arguments
 SUFFIX=""
 if [ "$1" = "--gen" ]
@@ -32,7 +32,7 @@ then
   shift
 fi
 
-IGGY_COMMAND=  realpath iggy.py
+IGGY_COMMAND=  /miniconda3/envs/pip-env/bin/iggy.py
 if [ "$1" = "--iggy-command" ]
 then
   IGGY_COMMAND="$2"
