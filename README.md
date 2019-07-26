@@ -84,6 +84,27 @@ required arguments:
 --sif SIF     influence graph in SIF format
 --icgc ICGC     ICGC file
 ```
+###### Example 1:
+```
+python pipe.py @arguments.txt
+```
+This commande will run all the steps of our method (1..5).
+
+###### Example 2:
+```
+python pipe.py @arguments.txt --steps 3
+```
+This commande will run only step 3 of our method.
+
+###### Example 3:
+```
+python pipe.py @arguments.txt --steps 4,5
+```
+This commande will run step 4 and 5 of our method.
+
+### Warning
+Every time you launch the tool, it will overwrite the data produced during previous launches. If you need it, think of saving it under another name.
+
 ###### Assumptions 
 We assume that the network provided in the arguments file must be in the SIF file format
 ###### Case studie
