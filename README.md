@@ -66,23 +66,23 @@ $ python pipe.py --help
 usage: Usage : python pipe.py@arguments_file [--steps]
 key-pipeline: require a file preceded by ’@’ and must contain all the required arguments cited below :
 optional arguments :
--h , --help   show this help message and exit
+-h , --help                       show this help message and exit
 optional arguments :
---dir DIR     follows the up stream ( ”up” ) or the down stream ( ”down” )
---steps STEPS     specify the number of the steps to run :
+--dir DIR                         follows the up stream ( ”up” ) or the down stream ( ”down” )
+--steps STEPS                     specify the number of the steps to run :
 [ 1 ] Graph extraction
 [ 2 ] Pathfinder
 [ 3 ] Iggy
 [ 4 ] Cross-Validation
 [ 5 ] Plots
 ( I f many ,separate by ’,’). Default run all steps
---start_sampling START_SAMPLING    The start sampling percentage. Default=10
+--start_sampling START_SAMPLING   The start sampling percentage. Default=10
 --stop_sampling STOP_SAMPLING     The stop sampling percentage. Default=100
 --step_sampling STEP_SAMPLING     The step of sampling. Default=5
---numbers_run NUMBERS_RUN     The number of runs on each step. Default=100
+--numbers_run NUMBERS_RUN         The number of runs on each step. Default=100
 required arguments:
---sif SIF     influence graph in SIF format
---icgc ICGC     ICGC file
+--sif SIF                         influence graph in SIF format
+--icgc ICGC                       ICGC file
 ```
 ###### Example 1:
 ```
@@ -108,7 +108,8 @@ Every time you launch the tool, it will overwrite the data produced during previ
 ###### Assumptions 
 We assume that the network provided in the arguments file must be in the SIF file format
 ###### Case studie
-An example for hepatocellular carcinoma (hcc) is provided under the folder ```example```, the KEGG graph extraction (in SIF format), the differential expression data obtained from ICGC data (in CSV format), the blacklisted species, and the validation parameters start sampling, stopsampling, step sampling, numbers run).
+An example for hepatocellular carcinoma (HCC) is provided under the folder ```example```, the KEGG graph extraction (in SIF format), the differential expression data obtained from ICGC data (in CSV format), the blacklisted species, and the validation parameters start sampling, stop sampling, step sampling, numbers run).
+The values of the validation parameters in the arguments file are: start sampling percentage= 10, stop sampling percentage= 15, step sampling= 5 and the number of runs= 2.
 
 ### 4 Steps
 Each step of the tool need some inputs and produce outputs, We found on each step the ```scripts``` folder that contain all scripts needed on each step and ```data``` folder which contain all the input/output data.
