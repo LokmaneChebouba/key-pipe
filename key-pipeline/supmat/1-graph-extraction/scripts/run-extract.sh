@@ -7,12 +7,15 @@
 # Authors: Maxime Folschette, Vincent Legagneux, Arnaud Poret, Lokmane Chebouba, Carito Guziolowski and Nathalie Théret
 
 #create data folders
-rm -r ./supmat/2-pathrider/data
-mkdir ./supmat/2-pathrider/data
-rm -r ./supmat/3-iggy/data
-mkdir ./supmat/3-iggy/data
-rm -r ./supmat/4-validation/data
-mkdir ./supmat/4-validation/data
+if [ ! -d ./supmat/2-pathrider/data ]; then
+  mkdir -p ./supmat/2-pathrider/data;
+fi
+if [ ! -d ./supmat/3-iggy/data ]; then
+  mkdir -p ./supmat/3-iggy/data;
+fi
+if [ ! -d ./supmat/4-validation/data ]; then
+  mkdir -p ./supmat/4-validation/data;
+fi
 
 echo "Reading $1.."
 #construction of the observation from the icgc file
