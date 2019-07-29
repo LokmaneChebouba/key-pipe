@@ -32,7 +32,7 @@ then
   shift
 fi
 
-IGGY_COMMAND= "$CONDA_PREFIX/bin/iggy.py"
+IGGY=$(dirname "$(which iggy.py)")
 if [ "$1" = "--iggy-command" ]
 then
   IGGY_COMMAND="$2"
