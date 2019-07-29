@@ -33,4 +33,4 @@ awk -F"\t" 'FNR > 1 {if ($2 > 2  && -log($3)/log(10)>5) print $1 "_gen = +"; els
 awk -F"\t" 'FNR > 1 {if ($2 > 2  && -log($3)/log(10)>5) print $1 " = +"; else if ($2 < -0.5 && -log($3)/log(10)>5) print $1 " = -";}' "$1" > ./supmat/2-pathrider/data/updown-noinputs_gen.obs
 
 #construct column_name.txt
-awk -F" " '{print $1}' ./supmat/2-pathrider/data/updown-noinputs_gen2.obs  > ./supmat/2-pathrider/data/column_name.txt
+awk -F" " '{print $1}' ./supmat/2-pathrider/data/updown-noinputs_gen2.obs  > ./supmat/2-pathrider/data/genes_name.txt
