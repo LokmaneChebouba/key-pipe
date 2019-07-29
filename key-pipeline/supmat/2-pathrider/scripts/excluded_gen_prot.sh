@@ -27,4 +27,4 @@ then
   exit 1
 fi
 
-awk '{print $1 "_gen"; print $1 "_prot"}' "$1" > ./supmat/2-pathrider/data/black_list_gen_prot.txt
+awk '{print $1 "_gen"; print $1 "_prot"}' "$1" > ./supmat/2-pathrider/data/excluded_gen_prot.txt
