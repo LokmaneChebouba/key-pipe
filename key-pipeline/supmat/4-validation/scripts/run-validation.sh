@@ -1,4 +1,5 @@
 #!/bin/bash
+export LC_ALL=C
 
 # Run computation and tests for the statistical validation 
 # --------------------------------------------------------
