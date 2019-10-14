@@ -1,5 +1,7 @@
 # key-pipeline
-A computational model to identify key protein-complexes associated to tumor progression
+This tool is part of the Supplementary Material of the submission entitled
+*A pipeline to create predictive functional networks: application to the tumor progression of hepatocellular carcinoma*
+by Maxime Folschette, Vincent Legagneux, Arnaud Poret, Lokmane Chebouba, Carito Guziolowski and Nathalie Théret
 
 ## 1 Introduction
 We introduce the `key-pipeline`, a python package implementing a workflow for identifying key protein-complexes associated to tumor progression. From an initial network and a set of experimental data on gene expression, our software allows researchers to
