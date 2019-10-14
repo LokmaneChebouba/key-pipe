@@ -3,7 +3,7 @@
 # Construct the Iggy observations file by appending inputs to preliminary observations
 # ------------------------------------------------------------------------------------
 # This file is part of the Supplementary Material of the submission entitled:
-# A pipeline to create predictive models: application to the tumor progression of hepatocellular carcinoma
+# A pipeline to create predictive functional networks: application to the tumor progression of hepatocellular carcinoma
 # Authors: Maxime Folschette, Vincent Legagneux, Arnaud Poret, Lokmane Chebouba, Carito Guziolowski and Nathalie Théret
 
 ###
