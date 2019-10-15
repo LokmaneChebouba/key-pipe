@@ -14,16 +14,20 @@ We introduce the `key-pipeline`, a python package implementing a workflow for id
 ## 2 Prerequisites
 `key-pipeline` is a Python application that uses several libraries and tools.
 
-##### With Python already installed
-If you already have Python installed, you can install and configure automatically conda by running either `config_Linux.py` or `config_MacOS.py` in the `key-pipeline` folder using:
+##### Automated setup
+The easiest way to install and configure required software (Python, Conda and Python libraries) is to run either `config_Linux.sh` or `config_MacOS.sh`, by using the following command:
 
 ```
-$ python config_<your_OS>.py
+$ bash config_<your_OS>.sh
 ```
 
-##### Without Python already installed
-If Python is not installed on your machine yet, the easiest way is to download and install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) for Python 3.7.
-Once Miniconda is installed, use the `environment.yml` file in the `key-pipeline` folder to configure the environment by runing:
+These scripts will download and run the installation of Miniconda if required, and then create the environment with the necessary libraries.
+If Conda is not already installed, you will have to go through the configuration process, which is very guided and offers consistent default choices at every step.
+
+##### Manual setup
+If you prefer having more control on your system and know what you are doing, your may also manually setup your environment.
+First, if Conda or Python 3 are not installed on your machine, manually download and install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) for Python 3.7.
+Then go to the `key-pipeline` folder and create the environment by running:
 
 ```
 $ conda env create -f environment.yml
@@ -33,7 +37,7 @@ The `environment.yml` file contains all depencies required for the successful ex
 
 ##### Activation/Deactivation of pip-env environment
 After following either of the two cases above, an environment named `pip-env` with all required dependencies (Python, iggy, plotly, etc.) should be created.
-To activate this environment, use:
+You need to activate this environment before using the pipeline, by running:
 
 ```
 $ conda activate pip-env
@@ -153,14 +157,18 @@ This command will run steps 4 and 5 of our method.
 ## Warning
 Every time you launch the tool, it will overwrite the data produced during previous launches. If you need it, think of saving it under another name.
 
-##### Assumptions 
-We assume that the network provided in the arguments file is in [SIF format](https://cytoscape.org/manual/Cytoscape2_5Manual.html#SIF%20Format).
+##### Assumptions
+We assume the following file formats for the input data:
+
+- The network is provided in [SIF format](https://cytoscape.org/manual/Cytoscape2_5Manual.html#SIF%20Format),
+- The experimental data file (for instance ICGC data) is provided in plain text [TSV format](https://en.wikipedia.org/wiki/Comma-separated_values),
+- The list of weakly expressed genes (to be filtered out) is provided with plain text with one gene name per line.
 
 ##### Case study
 An example for hepatocellular carcinoma (HCC) is provided under the folder `example`, providing:
 
 - a KEGG graph extraction (in SIF format),
-- the differential expression data obtained from ICGC data (in CSV format),
+- the differential expression data obtained from ICGC data (in TSV format),
 - a list of blacklisted species.
 
 This is intended for immediate use and these files are already specified in the `arguments.txt` file.
