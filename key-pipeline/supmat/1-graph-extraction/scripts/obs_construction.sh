@@ -7,29 +7,32 @@
 # A pipeline to create predictive functional networks: application to the tumor progression of hepatocellular carcinoma
 # Authors: Maxime Folschette, Vincent Legagneux, Arnaud Poret, Lokmane Chebouba, Carito Guziolowski and Nathalie Théret
 
-# Usage:
-#   bash obs_construction.sh icgc_filtered.csv > results-file
-# where icgc_filtered is the ICGC file with just genes of interest (filtered)
-# and results-file is a file containing the output;
+# Load experimental (ICGC) data and extract the relevant observations
 #
-# Output:
-#   1- observation file (X_gen = +/-)
-#   2- name column file (X_gen)
+# Usage:
+#   bash obs_construction.sh icgc_data.csv
+# where icgc_data is the experimental data file (for instance ICGC data) in TSV format containing
+# at least 3 columns: gene names, fold-change and p-value (the other columns are ignored).
+#
+# Output: two files are created
+#   - genes_name.txt: name column file (X_gen)
+#   - updown-noinputs_gen.obs: observation file without suffixes (X = +/-)
+#   - updown-noinputs_gen2.obs: observation file (X_gen = +/-)
 #
 # Example:
-#   sh obs_construction.sh icgc_filtered.csv 2345.obs
+#   sh obs_construction.sh ../../../../example/GSEA_EMThigh_vs_EMTlow_diffexp.csv
 # 
 
 if [ -z "$1" ]
 then
-  echo "Usage: sh obs_construction.sh icgc_filtered.csv > results-file" #donner GSEA_... 
-  echo "icgc_filtered is the ICGC file with just genes of interest (filtered)"
-  echo "and results-file is a file containing the output"
+  echo "Usage: bash obs_construction.sh icgc_data.csv"
+  echo "where icgc_data.csv is the experimental data file in TSV format"
+  echo "containing gene names, fold-change and p-values"
   exit
 fi
 
 
-awk -F"\t" 'FNR > 1 {if ($2 > 2  && -log($3)/log(10)>5) print $1 "_gen = +"; else if ($2 < -0.5 && -log($3)/log(10)>5) print $1 "_gen = -";}' "$1" > ./supmat/2-pathrider/data/updown-noinputs_gen2.obs #trouver la bonne formule -log2$3
+awk -F"\t" 'FNR > 1 {if ($2 > 2  && -log($3)/log(10)>5) print $1 "_gen = +"; else if ($2 < -0.5 && -log($3)/log(10)>5) print $1 "_gen = -";}' "$1" > ./supmat/2-pathrider/data/updown-noinputs_gen2.obs
 awk -F"\t" 'FNR > 1 {if ($2 > 2  && -log($3)/log(10)>5) print $1 " = +"; else if ($2 < -0.5 && -log($3)/log(10)>5) print $1 " = -";}' "$1" > ./supmat/2-pathrider/data/updown-noinputs_gen.obs
 
 #construct column_name.txt
